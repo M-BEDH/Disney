@@ -62,3 +62,33 @@ a {
     text-decoration: none;
     transition: color 125ms
 }
+
+header {
+    margin-left: 10px;
+    padding-top: 25px;
+}
+
+.banner{
+    width: 100%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center ;
+}
+
+.banner .logo img {
+    width: 100px;
+    display: block;
+    background-size: contain;
+}
+
+.banner nav ul li a{
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    margin-left: 25px;
+    font-size: 0.8rem;
+}
+
+.banner nav ul{
+    display: flex;
+}
