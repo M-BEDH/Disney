@@ -83,12 +83,33 @@ header {
 
 .banner nav ul li a{
     color: #000;
-    font-weight: bold;
+    font-weight: 600;
     display: flex;
     margin-left: 25px;
     font-size: 0.8rem;
+    font-family: var(--header-font-family);
 }
 
 .banner nav ul{
     display: flex;
+}
+
+.lilo_poster {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    object-fit: contain;
+}
+
+.lilo_poster:hover {
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+.title_lilo {
+    width: 25%;
+    display: block;
+    position: relative;
+    top: 1rem;
+    margin-left: 60px;
 }
