@@ -1,0 +1,64 @@
+:root {
+    --header-font-family: InspireTWDC, AvenirNext, Matterhorn, InspireTWDC, Helvetica, sans-serif;
+    --header-font-weight: 400;
+    --header-font-style: normal;
+    --body-font-family: InspireTWDC, AvenirNext, Matterhorn, InspireTWDC, Helvetica, sans-serif;
+    --body-font-weight: 400;
+    --body-font-style: normal;
+    --globalfooter-font-family: InspireTWDC, AvenirNext, Matterhorn, InspireTWDC, Helvetica, sans-serif;
+    --globalfooter-font-weight: 400;
+    --globalfooter-font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,input,textarea,select,button {
+    font-size: 1em;
+    line-height: 1.2;
+    color: #000000b3
+}
+
+body,body a,input,input a,textarea,textarea a,select,select a,button,button a {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    font-style: var(--body-font-style)
+}
+
+
+h1,h1 a,h2,h2 a,h3,h3 a,h4,h4 a,h5,h5 a,h6,h6 a {
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+    font-style: var(--header-font-style)
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1em
+}
+
+h2 {
+    font-size: 1.6em
+}
+
+h3,h4,h5,h6 {
+    font-size: 1em
+}
+
+p {
+    font-size: 0.96em;
+    line-height: 1.4em
+}
+
+ol,ul {
+    list-style: none
+}
+
+a {
+    color: #1786eb;
+    text-decoration: none;
+    transition: color 125ms
+}
