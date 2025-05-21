@@ -161,7 +161,7 @@ img.posterLilo {
 
 .btn{
     border-radius: 50px;
-    padding: 14px 0;
+    padding: 13px 0;
     text-transform: uppercase;
     margin-top: 10px;
     border: none;
@@ -338,8 +338,6 @@ article img {
     }
     .lilo_background {
         width: 100%;
-        display: flex;
-        flex-direction: column;
         overflow: visible;
         position: absolute;
     }
@@ -347,14 +345,13 @@ article img {
     img.posterLilo {
         transition: transform 0.5s;
     }
-    
-    
+
     .title_info {
         width: 100%;
         position: relative;
         left: 0;
         right: 0;
-        top: 0px;      
+        top: -4px;      
         align-items: center;
         justify-content: center;
         display: flex;
@@ -384,9 +381,9 @@ article img {
     }
     
     .title_text button {
-        width: 45%;
+        width: 44%;
         font-size: 0.8rem;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
     }
     
     
