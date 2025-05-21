@@ -328,30 +328,36 @@ article img {
 
 @media (max-width: 1000px) {
     
+    body {
+        overflow-x: hidden;
+    }
     .container {
         max-width: 100%;
     }
     
-    
     header {
         height: 104vh;
     }
+
     .lilo_background {
         width: 100%;
         overflow: visible;
-        position: absolute;
     }
     
     img.posterLilo {
-        transition: transform 0.5s;
+        position: absolute;
+        display: flex;
+        left: -27rem;
+        width: 150%;
+        z-index: 1;
     }
 
     .title_info {
         width: 100%;
         position: relative;
         left: 0;
-        right: 0;
-        top: -4px;      
+        right: 0;   
+        top: 35rem;
         align-items: center;
         justify-content: center;
         display: flex;
@@ -386,20 +392,19 @@ article img {
         margin-right: 1.5rem;
     }
     
-    
     .section1 {
-        padding: 0 2rem;
+        background-color: #EBEBEB;
+        display: flex;
         flex-wrap: wrap;
-    }
-    .section1 article {
-        width: 45%;
-        margin-bottom: 2rem;
+        margin-top: 5rem;
+        padding: 1rem 3rem;
     }
     
     .section1 article {
         width: 49%;
+        margin-top: 2rem;
     }
-    
+
     .section2 {
         padding: 0 2rem;
     }
