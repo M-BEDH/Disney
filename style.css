@@ -258,7 +258,7 @@ article img {
     color: #fff;
     position: relative;
     overflow: hidden;
-   
+    
 }
 
 .section2 article img {
@@ -302,9 +302,15 @@ article img {
     text-transform: uppercase;
 }
 
+.suscribe button:hover {
+    background-color: #EBEBEB;
+    border-color: #DDE1E3;
+    cursor: pointer;
+}
+
 .suscribe span {
     color: #fff;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .section3 {
@@ -315,4 +321,116 @@ article img {
     text-align: center;
     padding: 2rem;
     font-size: 1.8rem;
+}
+
+
+/*********************************MEDIA QUERIES *********************************/
+
+@media (max-width: 1000px) {
+    
+    .container {
+        max-width: 100%;
+    }
+    
+    
+    header {
+        height: 104vh;
+    }
+    .lilo_background {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        position: absolute;
+    }
+    
+    img.posterLilo {
+        transition: transform 0.5s;
+    }
+    
+    
+    .title_info {
+        width: 100%;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0px;      
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        background-color: #E4F0F4;   
+    }
+    
+    .title_info img {
+        padding-top: 2rem;
+        width: 40%;
+        margin: auto;
+    }
+    
+    .title_text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .title_info p{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .title_text button {
+        width: 45%;
+        font-size: 0.8rem;
+        margin-right: 1rem;
+    }
+    
+    
+    .section1 {
+        padding: 0 2rem;
+        flex-wrap: wrap;
+    }
+    .section1 article {
+        width: 45%;
+        margin-bottom: 2rem;
+    }
+    
+    .section1 article {
+        width: 49%;
+    }
+    
+    .section2 {
+        padding: 0 2rem;
+    }
+    .section2 article {
+        width: 48%;
+    padding-bottom: 1rem;
+    padding-top: 0;
+    }
+
+    .section2 .display {
+        display: none;
+    }
+    
+    .section2 h4 {
+        padding: 0.5rem 0;
+    }
+    .section2 p {
+        font-size: 0.8rem;
+        font-weight: light;
+        color: #DDE1E3;
+    }
+
+        .suscribe button {
+        width: 28%;
+        }
+
+        .suscribe span {    
+        font-size: 0.7rem;
+        }
+
 }
