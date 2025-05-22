@@ -318,12 +318,13 @@ article img {
 .section3, .section4, .section5,.section6, .section7 {
 background-color: #f1f2f3;
 padding-top: 3rem;
+padding-bottom: 2rem;
 }
 
 .section3 h2, .section4 h2, .section5 h2, .section6 h2, .section7 h2 {
     width: 100%;
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .section3 h3, .section4 h3 {
@@ -351,6 +352,7 @@ width: 49%;
 
 .poster_background.boutique, .poster_background.actus{
     width: 88%;
+    height: 50vh;
     position: initial;
     margin: auto;
 }
@@ -392,7 +394,43 @@ width: 49%;
     font-size: 1rem;
 }
 
+footer {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
 
+footer p {
+    margin-top: 1rem;
+}
+
+.footer_social, .footer_navbar {
+   text-align: center;
+    margin-top: 1rem;
+}
+
+.footer_social i {
+    width: 2rem;
+    font-size: 20px;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+.footer_navbar img {
+width: 5rem;
+margin-bottom: 0.5rem;
+}
+
+.footer_navbar {
+     font-size: 0.7rem;
+}
+
+.footer_navbar nav ul {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
 
 
 /*********************************MEDIA QUERIES *********************************/
