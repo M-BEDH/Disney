@@ -111,19 +111,20 @@ header {
     color: #1786eb;
 }
 
-.lilo_background {
+.poster_background {
     width: 83.33%;
     height: 75vh;
     position: absolute;
     overflow: hidden;
+    background-color: #F1F2F3;
 }
 
-img.posterLilo {
+img.poster {
     width: 100%;
     transition: transform 0.5s;
 }
 
-.lilo_background:hover img.posterLilo {
+.poster_background:hover img.poster {
     transform: scale(1.03);
     cursor: pointer;
 }
@@ -189,7 +190,7 @@ img.posterLilo {
     cursor: pointer;
 }
 
-.section1 {
+.section1{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -214,7 +215,7 @@ article img {
     padding: 1rem 2rem 0;
 }
 
-.title_article h2 {
+.title_article h3 {
     height: 38px;
     font-size: 1rem;
     font-weight: 600;
@@ -235,7 +236,7 @@ article img {
     color: #000;
 }
 
-.section2 {
+.section2, .section3, .section4 {
     background-color: #054553;
     display: flex;
     flex-wrap: wrap;
@@ -243,7 +244,7 @@ article img {
     padding: 0 5rem;
 }
 
-.section2 h3 {
+.section2 h2 {
     width: 100%;
     color: #fff;
     text-align: center;
@@ -272,7 +273,7 @@ article img {
     cursor: pointer;
 }
 
-.section2 h4 {
+.section2 h3 {
     padding: 1rem 0;
     font-weight: bold;
 }
@@ -313,15 +314,84 @@ article img {
     font-size: 0.8rem;
 }
 
-.section3 {
-    background-color:#F1F2F3;
-    height: 200px;
-    width: 100%;
-    color: #000000;
-    text-align: center;
-    padding: 2rem;
-    font-size: 1.8rem;
+.section3, .section4, .section5,.section6, .section7 {
+background-color: #f1f2f3;
+padding-top: 3rem;
 }
+
+.section3 h2, .section4 h2, .section5 h2, .section6 h2, .section7 h2 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.section3 h3, .section4 h3 {
+    margin: 0;
+}
+
+.section3 article {
+    width: 48%;
+    max-height: 70vh;;
+    margin: 0.5rem;
+}
+
+.section3 span.italic {
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.section4 .articleLion{
+width: 49%;
+}
+
+.section4 article {
+    width: 23%;
+}
+
+.poster_background.boutique, .poster_background.actus{
+    width: 88%;
+    position: initial;
+    margin: auto;
+}
+
+.title_info.boutique{
+    width: 24%;
+    position: relative; 
+    top: -22rem;
+    left: 10rem;
+} 
+
+.title_text.boutique p, span{
+    width: 17rem;
+    color: #ffff;
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+}
+
+.section5 .title_info.boutique span {
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-top: 2rem;
+}
+
+.section7 .title_info.actus {
+    width: 50%;
+    position: relative; 
+    top: -22rem;
+    left: 23rem;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.title_text.actus .btn {
+    width: 40%;
+    background-color: #fff;
+    font-size: 0.8rem;
+}
+
+
 
 
 /*********************************MEDIA QUERIES *********************************/
@@ -339,12 +409,12 @@ article img {
         height: 104vh;
     }
 
-    .lilo_background {
+    .poster_background {
         width: 100%;
         overflow: visible;
     }
     
-    img.posterLilo {
+    img.poster {
         position: absolute;
         display: flex;
         left: -27rem;
@@ -424,7 +494,7 @@ article img {
     .section2 p {
         font-size: 0.8rem;
         font-weight: light;
-        color: #DDE1E3;
+        color: #dde1e3;
     }
 
         .suscribe button {
@@ -436,3 +506,4 @@ article img {
         }
 
 }
+
