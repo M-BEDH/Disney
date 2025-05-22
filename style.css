@@ -386,6 +386,30 @@ width: 49%;
     margin-top: 2rem;
 }
 
+/* *********************************************** SLIDE *****************************************/
+
+.section6 .slide{
+    width: 88%;
+    margin: auto;
+    display: flex;
+}
+
+.section6 .slide figure {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+}
+
+.section6 .slide figcaption {
+    width: 95%;
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+
+/***********************************************************************************************/
+
 .section7 .title_info.actus {
     width: 66%;
     position: relative; 
