@@ -310,6 +310,7 @@ article img {
 }
 
 .suscribe span {
+    width: 20rem;
     color: #fff;
     font-size: 0.8rem;
 }
@@ -377,18 +378,18 @@ width: 49%;
 }
 
 .section7 .title_info.actus {
-    width: 50%;
+    width: 66%;
     position: relative; 
     top: -22rem;
-    left: 23rem;
+    left: 14rem;
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .title_text.actus .btn {
-    width: 40%;
+    width: 35%;
     background-color: #fff;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 
