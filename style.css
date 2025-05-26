@@ -480,7 +480,7 @@ visibility: visible;
 }
 }
 
-/******************************************************************************************/
+/*****************************************SLIDE*************************************************/
 
 .section7 .title_info.actus {
     width: 66%;
@@ -534,6 +534,12 @@ footer p {
     justify-content: space-around;
     margin-bottom: 2rem;
 }
+
+#menuToggle {
+    display: none;
+}
+
+
 
 
 /*********************************MEDIA QUERIES *********************************/
@@ -646,6 +652,139 @@ footer p {
     .suscribe span {    
         font-size: 0.7rem;
     }
-    
+
+    /**********************************************MENU BURGER****************************************/
+
+    #menuToggle {
+    display: block;
 }
 
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+
+#menuToggle input
+{   display: block;
+    width: 45px;
+    height: 35px;
+    position: absolute;
+    top: 53px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  left: 10px;
+  background: #ee2020;
+  border-radius: 3px;
+  
+  z-index: 100;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ee2020;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+position: absolute;
+        max-width: 104px;
+        width: 100vw;
+        max-height: 100vh;
+        margin: -100px 0 0 -50px;
+        padding: 17px;
+        /* padding-top: 107px; */
+        box-sizing: border-box;
+        overflow-y: auto;
+        background: #000000b5;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        z-index: 10;
+        left: 50px;
+        top: 186px;
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menu li label
+{
+  cursor: pointer;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+}
+    
