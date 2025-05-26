@@ -399,12 +399,26 @@ article img {
     overflow: hidden;
 }
 
-.section6 #carousel__slide figure {
+.section6 #carousel__slide figure{
     width: 20%;
     display: flex;
     flex-direction: column;
     padding: 0.8rem;
 }
+
+/*******************************************************HOVER IMAGES SLIDE **************************************/
+
+.section6 #carousel__slide figure img {
+    transition: transform 0.5s;
+    /* transform : scale(1); */
+    overflow: hidden;
+}
+.section6 #carousel__slide figure:hover img{
+    transform : scale(1.1);
+}
+
+
+/*********************************************************************************/
 
 .section6 #carousel__slide figcaption {
     width: 95%;
@@ -661,6 +675,127 @@ footer p {
         font-size: 0.7rem;
     }
     
+    .section3, .section4, .section5 {
+        padding: 1rem 2rem;
+    }
+    
+    .section4 .articleLion {
+        width: 98%;
+        margin-bottom: 1rem;
+    }
+    
+    .section4 article {
+        width: 48%;
+    }
+    
+    .section4 article .title_article p {
+        height: 35px;
+        margin-bottom: 2rem;
+    }
+    
+    .section5 img.poster {
+        display: flex;
+        left: 3rem;
+        width: 90%;
+        z-index: 1;
+        margin: auto;
+    }
+    .title_info.boutique {
+        z-index: 1;
+        width: 24%;
+        position: relative;
+        top: 0rem;
+        left: 0rem;
+        background-color: transparent;
+    }
+    
+    .poster_background.boutique, .poster_background.actus {
+        height: 29vh;
+        
+    }
+    
+    .title_info img {
+        width: 150%;
+    }
+    
+    .title_text {
+        position: relative;
+        left: 3rem;
+        top: 1rem;
+    }
+    
+    .section6 #carousel__slide {
+        width: 92%;
+    }
+    
+    .section6 #carousel__slide figure{
+        width: 45%;
+    }
+    .section6 #carousel__slide img {
+        width: 40vw;
+    }
+    
+    .section6 label img  {
+        display: none;
+    }
+    
+    .section7 {
+        padding-top: 0;
+    }
+
+    .section7 .title_info.actus {
+        width: 66%;
+        top: 0rem;
+        left: 14rem;
+        color: #fff;
+        font-size: 3rem;
+        z-index: 1;
+    }
+    
+    .section7 .title_info.actus {
+        width: 80%;
+        position: relative;
+        top: 0rem;
+        left: 1rem;
+        color: #fff;
+        z-index: 1;
+        background-color: transparent;
+    }
+    
+    .section7 img.poster {
+        width: 91%;
+        height: 29vh;
+        left: 3rem;
+        z-index: 1;
+    }
+    
+    .section7 .title_text {
+        width: 55%;
+        font-size: 1.7rem;
+        position: relative;
+        left: 4rem;
+        top: 4rem;
+    
+    }
+    
+    .title_text.actus .btn {
+        width: 69%;
+        font-size: 0.8rem;        
+    }
+    
+    .footer_navbar nav ul {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+ .footer_navbar nav ul li {
+    margin: 0.5rem;
+ }
+
+
     /**********************************************MENU BURGER****************************************/
     
     #menuToggle {
@@ -670,18 +805,18 @@ footer p {
     
     #menuToggle a
     {
-    text-decoration: none;
-    color: #000000;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    transition: color 0.3s ease;
-    padding-left: 2rem;
-    font-weight: bold;
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        transition: color 0.3s ease;
+        padding-left: 2rem;
+        font-weight: bold;
     }
     
     #menuToggle input
     {   display: block;
-        width: 45px;
+        width: 60px;
         height: 35px;
         position: absolute;
         top: 15px;
@@ -729,6 +864,8 @@ footer p {
     {
         transform: rotate(45deg) translate(-4px, -2px);
         background: #000000;
+        position: relative;
+        top: -26px;
     }
     
     /*
@@ -769,38 +906,38 @@ footer p {
         left: 50px;
         top: 160px;
     }
-    }
-    
-    #menu li
-    {
-        padding: 10px 0;
-        font-size: 22px;
-        background-color: #fff;
-        padding: 0 1rem 1rem 3rem;
-        border-bottom: 1px solid lightgrey;
-    }
-    
-    #menu li label
-    {
-        cursor: pointer;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    /*
-    * And let's slide it in from the left
-    */
-    #menuToggle input:checked ~ ul
-    {
-        transform: none;
-        border: 2px solid black;
-    }
+}
 
-    #menuToggle input:checked ~ ul li img{
-        width: 1rem;
-    }
-    
-    
+#menu li
+{
+    padding: 10px 0;
+    font-size: 22px;
+    background-color: #fff;
+    padding: 0 1rem 1rem 3rem;
+    border-bottom: 1px solid lightgrey;
+}
+
+#menu li label
+{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*
+* And let's slide it in from the left
+*/
+#menuToggle input:checked ~ ul
+{
+    transform: none;
+    border: 2px solid black;
+}
+
+#menuToggle input:checked ~ ul li img{
+    width: 1rem;
+}
+
+
 
 
