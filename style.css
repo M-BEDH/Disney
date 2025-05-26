@@ -450,15 +450,15 @@ figure {
     animation: slideLeft 1s ease forwards;
     overflow: visible;
     figure:nth-of-type(1), figure:nth-of-type(2), figure:nth-of-type(3), figure:nth-of-type(4), figure:nth-of-type(5){
-    visibility: hidden;    
-}
+        visibility: hidden;    
+    }
 }
 
 #carousel__slide {
     animation: slideRight 1s ease forwards;   
-        figure:nth-of-type(1), figure:nth-of-type(2), figure:nth-of-type(3), figure:nth-of-type(4), figure:nth-of-type(5){
-visibility: visible;
-        }
+    figure:nth-of-type(1), figure:nth-of-type(2), figure:nth-of-type(3), figure:nth-of-type(4), figure:nth-of-type(5){
+        visibility: visible;
+    }
 }
 
 
@@ -468,7 +468,7 @@ visibility: visible;
     }
     to {
         transform: translateX(-88%)
-}
+    }
 }
 
 @keyframes slideRight {
@@ -477,7 +477,7 @@ visibility: visible;
     }
     to {
         transform: translateX(0);
-}
+    }
 }
 
 /*****************************************SLIDE*************************************************/
@@ -555,6 +555,14 @@ footer p {
     
     header {
         height: 104vh;
+    }
+    
+    .banner nav {
+        display: none;
+    }
+    
+    .banner  {
+        justify-content: center;
     }
     
     .poster_background {
@@ -652,139 +660,113 @@ footer p {
     .suscribe span {    
         font-size: 0.7rem;
     }
-
+    
     /**********************************************MENU BURGER****************************************/
-
+    
     #menuToggle {
-    display: block;
-}
+        display: block;
+    }
+    
+    #menuToggle a
+    {
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+    padding-left: 2rem;
+    font-weight: bold;
+    }
+    
+    #menuToggle input
+    {   display: block;
+        width: 45px;
+        height: 35px;
+        position: absolute;
+        top: 15px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+    }
+    
+    #menuToggle span
+    {
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-bottom: 5px;
+        position: relative;
+        left: 10px;
+        top: -35px;
+        border-radius: 3px;
+        background-color: #000;
+        transition: all 0.3s ease;
+        font-weight: lighter;
+    }
+    
 
+    #menuToggle input:checked ~ span
+    {
+        transform: rotate(45deg);
+    }
+    
+#menuToggle input:checked ~ span:first-child
+    {
+        transform: rotate(90deg);
+    }
+    
 
-#menuToggle a
-{
-  text-decoration: none;
-  color: #fff;
-  font-size: 0.8rem;
-  transition: color 0.3s ease;
-}
-
-
-#menuToggle input
-{   display: block;
-    width: 45px;
-    height: 35px;
-    position: absolute;
-    top: 53px;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 28px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  left: 10px;
-  background: #ee2020;
-  border-radius: 3px;
-  
-  z-index: 100;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #ee2020;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-position: absolute;
-        max-width: 104px;
+    #menu
+    {
+        position: absolute;
+        max-width: 100%;
         width: 100vw;
         max-height: 100vh;
         margin: -100px 0 0 -50px;
-        padding: 17px;
-        /* padding-top: 107px; */
         box-sizing: border-box;
         overflow-y: auto;
-        background: #000000b5;
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         transform-origin: 0% 0%;
-        transform: translate(-100%, 0);
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
         z-index: 10;
         left: 50px;
-        top: 186px;
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-#menu li label
-{
-  cursor: pointer;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
-
+        top: 160px;
+    }
+    }
+    
+    #menu li
+    {
+        padding: 10px 0;
+        font-size: 22px;
+        background-color: #fff;
+        padding: 1rem;
+        border-bottom: 1px solid lightgrey;
+    }
+    
+    #menu li label
+    {
+    cursor: pointer;
+    display: flex
+;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
     
+    
+    /*
+    * And let's slide it in from the left
+    */
+    #menuToggle input:checked ~ ul
+    {
+        transform: none;
+        border: 2px solid black;
+    }
+
+    #menuToggle input:checked ~ ul li img{
+       width: 1rem;
+    }
+    
+    
+
+
