@@ -571,9 +571,10 @@ footer p {
 
 @media (max-width: 1000px) {
     
-    body {
+     body {
         overflow-x: hidden;
-    }
+     }
+
     .container {
         max-width: 100%;
     }
@@ -593,29 +594,32 @@ footer p {
     header .poster_background {
         width: 100%;
         overflow: visible;
+        height: 51vh;
     }
     
     header .poster_background img.poster {
         position: absolute;
         display: flex;
-        left: -32rem;
-        width: 156%;
+        left: -37rem;
+        width: 166%;
         z-index: 1;
-        height: 61vh;
+        height: 51vh;
         object-fit: cover;
     }
     
     header .poster_background .title_info {
         width: 100%;
+        height: 47vh;
         position: relative;
         left: 0;
         right: 0;   
-        top: 35rem;
+        top: 29rem;
         align-items: center;
         justify-content: center;
         display: flex;
         flex-direction: column;
-        background-color: #E4F0F4;   
+        background-color: #E4F0F4;
+        padding-top: 1rem;   
     }
     
      header .poster_background .title_info img {
@@ -649,8 +653,7 @@ footer p {
         background-color: #EBEBEB;
         display: flex;
         flex-wrap: wrap;
-        margin-top: 5rem;
-        padding: 1rem 3rem;
+        padding: 0 3rem;
     }
     
     .section1 article {
@@ -898,7 +901,17 @@ footer p {
         position: relative;
         top: -26px;
     }
-    
+
+    input:checked ~ .overlay   {
+        width: 100vw;
+        height: 100%;
+        position: fixed;
+        top: 5rem;
+        left: 0;
+        background: #00000080;
+        z-index: 3;   
+     }   
+
     /*
     * But let's hide the middle one.
     */
