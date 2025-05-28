@@ -430,6 +430,80 @@ article img {
 
 /******************************************SLIDE***************************************/
 
+.section6 #carousel__slide figcaption {
+    width: 95%;
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+.section6 label img {
+    width: 2.8rem;
+    border-radius: 50px;
+    background-color: #ffffff;
+    padding: 10px;
+    position:absolute;
+    top: 50%;
+    right: 5%;
+    z-index: 1;
+}
+
+.section6 #carousel__slide label img:hover {
+    opacity: 0.6;
+}
+
+figure {
+    padding: 1rem
+}
+
+#btnControl {
+    display: none;
+}
+
+#btnControl:checked + label > img {
+    position:absolute;
+    left: 16%;
+    transform: rotate(-180deg);
+    z-index: 1;
+}
+
+#btnControl:checked > .prev {
+    display: block;
+}
+
+#btnControl:checked ~ #carousel__slide {
+    animation: slideLeft 1s ease forwards;
+    overflow: visible;
+    figure:nth-of-type(1), figure:nth-of-type(2), figure:nth-of-type(3), figure:nth-of-type(4), figure:nth-of-type(5){
+    visibility: hidden;   
+     }  
+}
+
+ #carousel__slide {
+    animation: slideRight 1s ease forwards;   
+ }
+
+
+@keyframes slideLeft{
+    from {
+        transform: translateX(0);
+        opacity: 0;  
+    }
+    to {
+        transform: translateX(-88%);
+        opacity: 1;    
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-88%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 /*****************************************************************************************/
 
@@ -497,10 +571,9 @@ footer p {
 
 @media (max-width: 1000px) {
     
-     body {
+    body {
         overflow-x: hidden;
-     }
-
+    }
     .container {
         max-width: 100%;
     }
@@ -517,44 +590,39 @@ footer p {
         justify-content: center;
     }
     
-    header .poster_background {
+    .poster_background {
         width: 100%;
         overflow: visible;
-        height: 51vh;
     }
     
-    header .poster_background img.poster {
+    img.poster {
         position: absolute;
         display: flex;
-        left: -37rem;
-        width: 166%;
+        left: -27rem;
+        width: 150%;
         z-index: 1;
-        height: 51vh;
-        object-fit: cover;
     }
     
-    header .poster_background .title_info {
+    .title_info {
         width: 100%;
-        height: 47vh;
         position: relative;
         left: 0;
         right: 0;   
-        top: 29rem;
+        top: 35rem;
         align-items: center;
         justify-content: center;
         display: flex;
         flex-direction: column;
-        background-color: #E4F0F4;
-        padding-top: 1rem;   
+        background-color: #E4F0F4;   
     }
     
-     header .poster_background .title_info img {
+    .title_info img {
         padding-top: 2rem;
         width: 40%;
         margin: auto;
     }
     
-    header .poster_background .title_text {
+    .title_text {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -579,7 +647,8 @@ footer p {
         background-color: #EBEBEB;
         display: flex;
         flex-wrap: wrap;
-        padding: 0 3rem;
+        margin-top: 5rem;
+        padding: 1rem 3rem;
     }
     
     .section1 article {
@@ -599,12 +668,7 @@ footer p {
     .section2 .display {
         display: none;
     }
-
-    .image_section2 .display
- {
-    display: none;
- }    
-
+    
     .section2 h4 {
         padding: 0.5rem 0;
     }
@@ -642,37 +706,30 @@ footer p {
     
     .section5 img.poster {
         display: flex;
-        width: 100%;
+        left: 3rem;
+        width: 90%;
+        z-index: 1;
         margin: auto;
-        object-fit: cover;
-        height: 30vh;
-        transition: transform 0.5s;
     }
-
-    .section5 img.poster:hover {
-        transform: scale(1.03);
-        cursor: pointer;
-    }
-
-    .section5 .title_info.boutique {
+    .title_info.boutique {
         z-index: 1;
         width: 24%;
         position: relative;
-        top: -15rem;
-        left: 2rem;
+        top: 0rem;
+        left: 0rem;
         background-color: transparent;
     }
     
-   .section5 .poster_background.boutique{
-        height: 30vh;
-        width: 97%;
+    .poster_background.boutique, .poster_background.actus {
+        height: 29vh;
+        
     }
     
-    .section5 .title_info img {
+    .title_info img {
         width: 150%;
     }
     
-    .section5 .title_text {
+    .title_text {
         position: relative;
         left: 3rem;
         top: 1rem;
@@ -686,8 +743,7 @@ footer p {
         width: 45%;
     }
     .section6 #carousel__slide img {
-        width: 36vw;
-        border-radius: 5px
+        width: 40vw;
     }
     
     .section6 label img  {
@@ -698,11 +754,6 @@ footer p {
         padding-top: 0;
     }
     
-    .section7 .poster_background.actus  {
-         width: 91%;
-         height: 29vh;
-    }
-
     .section7 .title_info.actus {
         width: 66%;
         top: 0rem;
@@ -715,15 +766,15 @@ footer p {
     .section7 .title_info.actus {
         width: 80%;
         position: relative;
-        top: -17rem;
-        left: 10rem;
+        top: 0rem;
+        left: 1rem;
         color: #fff;
         z-index: 1;
         background-color: transparent;
     }
     
     .section7 img.poster {
-        width: 100%;
+        width: 91%;
         height: 29vh;
         left: 3rem;
         z-index: 1;
@@ -827,17 +878,7 @@ footer p {
         position: relative;
         top: -26px;
     }
-
-    input:checked ~ .overlay   {
-        width: 100vw;
-        height: 100%;
-        position: fixed;
-        top: 5rem;
-        left: 0;
-        background: #00000080;
-        z-index: 3;   
-     }   
-
+    
     /*
     * But let's hide the middle one.
     */
