@@ -500,6 +500,9 @@ footer p {
      body {
         overflow-x: hidden;
      }
+     body:has(#menuToggle input:checked) {
+        overflow: hidden;
+     }
 
     .container {
         max-width: 100%;
